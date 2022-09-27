@@ -7,6 +7,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:taxidriver/api/config_maps.dart';
 import 'package:taxidriver/main.dart';
 import 'package:taxidriver/screens/forgot_pass_screen.dart';
 import 'package:taxidriver/screens/signup_screen.dart';
@@ -35,14 +36,14 @@ class LoginScreen extends StatelessWidget {
             ),
             const Center(
               child: Image(
-                image: AssetImage('assets/images/logo.png'),
-                width: 390,
-                height: 250,
+                image: AssetImage('assets/gif/taxi.gif'),
+                width: 200,
+                height: 200,
                 alignment: Alignment.center,
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 1,
             ),
             const Text(
               'Login  as  a  Driver',
@@ -207,12 +208,23 @@ class LoginScreen extends StatelessWidget {
         .user;
     if (firebaseUser != null) //user created
     {
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(MainScreen.routeName, (route) => false);
-      displayToastMessage('your are logged in', context);
+      driversRef.child(firebaseUser.uid).once().then((event) {
+        final dataSnapshot = event.snapshot;
+        if (dataSnapshot.value != null) {
+          currentFirebaseUser = firebaseUser;
+          Navigator.of(context)
+              .pushNamedAndRemoveUntil(MainScreen.routeName, (route) => false);
+          displayToastMessage('your are logged in', context);
+        } else {
+          Navigator.of(context).pop;
+          _firebaseAuth.signOut();
+          displayToastMessage(
+              'No account exist with this credentials ', context);
+        }
+      });
     } else {
       Navigator.of(context).pop;
-      displayToastMessage('No account exist with this credentials ', context);
+      displayToastMessage('Error Occured, can not be Signed in', context);
     }
   }
 }
