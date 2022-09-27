@@ -180,6 +180,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                   },
                   style: ElevatedButton.styleFrom(
                     primary: driversStatusColor,
+                    onPrimary: Colors.red,
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(14)),
                     ),
