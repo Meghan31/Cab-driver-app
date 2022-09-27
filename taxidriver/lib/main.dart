@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:taxidriver/api/config_maps.dart';
@@ -9,6 +10,7 @@ import 'package:taxidriver/screens/login_screen.dart';
 import 'package:taxidriver/screens/main_screen.dart';
 import 'package:taxidriver/screens/signup_screen.dart';
 import 'package:taxidriver/screens/vehicle_info_screen.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'data handler/app_data.dart';
 
@@ -16,7 +18,13 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   currentFirebaseUser = FirebaseAuth.instance.currentUser;
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(const MyApp());
+}
+
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  debugPrint("Firebase Messaging firebase is initialized");
+  await Firebase.initializeApp();
 }
 
 DatabaseReference usersRef = FirebaseDatabase.instance.ref().child('users');
