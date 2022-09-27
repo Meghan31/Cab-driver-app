@@ -30,6 +30,8 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                 Center(
                   child: Column(
                     children: [
+                      Image.asset('assets/gif/forgot_animal.gif',
+                          width: 100, height: 100),
                       Card(
                         color: Colors.grey[200],
                         shadowColor: Colors.black,
