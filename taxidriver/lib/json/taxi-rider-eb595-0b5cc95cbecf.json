@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "taxi-rider-eb595",
+  "private_key_id": "0b5cc95cbecfcd1e2617ce3bf6fc6beffcce0c40",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCn6dXsyjbwCbpX\nNZO8P22Eeccrx9WEWcKIBWxpoPlDufzfpGJTltnMOJVxY92S3vHdU/TC+0hgOR6I\nisZkKmDqKpHCw4PvmYlLOT5/ADEOZoocm9f7WA9MQu5uUc8Ifsf1L39NClzU+Nlu\nW2yeXNLP9cD94Na2dHZLk1LILl7VcrrPEaO/Usb/9gy0wCZWQzXUdp0J7dT3Gah2\n154PhftJLC4b7W0z9BwCQBz5NNpAozYHw/DEEo9FXGkFYUgFbP74hfBaQsD3LeJS\nMjn9PNYiQFvyVQNGw4tDLM4N0kACtPLd33qszvBlDIJkrJk3C4pb1Mbt+v8kFCmp\nCsKEXelxAgMBAAECggEAD4m3ZoyFzeuQhz5pd9uEtmQQdrAsxW0K78xUrmebeVVu\nHYHYKXUFnXzE83OyzsL7raf1t89J8MGIXkk9N4qmYjTjPRsbi+Hwzvmym0z4vSTm\n9ePD9jm9XKi66JGAb4BP35PwG0Bwu7J1aF1kbTkYtu6+V5/lLogTZEXzPJvx4Z1w\nUXW8x256b6m8/X1/a9YXJn+GuybCH03zK/9kjJpFhgYIcFmjdjU9R+fLZMbJSTxj\nmIWYyx5B18bujoOsR6KwKEESpxNbk1/X4FL+Zq2u+2S6r6CY5kDW07LhO++ersG0\nVsy64JE7C21Isf9wftymam90HOblzwlZOU03Mq6YuwKBgQDdIwPQLTn6OrSk9AJI\nNuAsr7xoJhlA/8FbmaPaklrG9FRbh+PeLaB3bcSEd5W8b2aml4xLVeKrtK2pTrUo\ntaBceWSJWDoXSNWrUFsFtcNwY/WZvPz1zwyRaMTBLJC1aZiGLrk37cj0jLtGR7Yl\niPSjyhX4YV2Xse1ysCKfg7hYIwKBgQDCYr++X2jR6h7+zVJVh1tPstRecOgBZoJu\nAN6OEZjIoke7Ad86JB7bLR8S1hT44U/xcHZnSLMsMOPWrfznxITx5sZEycN9mdqJ\nW4GbrCCTI9joOiTugsOzJR1Qs+Iiogs4AJimcMGStQjbDcgPaWcoH0/OWCTQaTdw\n705QIeXnWwKBgGvcTlnWFXdl9wKWOh67FXD2brFmE99OYCOrtu4/gKOWPSdACvct\nzh0yny31nkWBGNKdDMMaKyuRPztbtqUaohM46r7LF9qPnhinYx5P3/oL55mLQt8q\nlHjAX2fRsuupi8m3NISBKQmPMzE+fSult53ETh8ObrY1BRpxqxGfD+V9AoGAFi+f\nIuNQ22SVVQ+qLgjc6yPGCWFpmX9Rs6x1ulFX1s5u0XFNQR2OSAXGXigBDMbqkOv9\nF5y8lnaeCoqhKvLLGbD1QDSnE1bUEolXKaVjsmeNAjRgsrhKDdBWoDdnv/wuu52V\nzqlf7parBBV2mAu3smSgfzSgPwlDQqiNj6fOzbECgYEAramY+rKmxIsnaLYrqAOU\npwQ/tX0gGxD+r34soAsJngueHoD2EFvsvIzQHvBGCAR+aOetJvrwA37X61E2serE\nfJG8vp6sL4Oj2qWimuL97kxTqQ/tM0wBEeCTnTV2OfMnpCbKp/AeV1fA/Vtv8P2z\nUb3GNxrbWNCPuoShwRSwJ7U=\n-----END PRIVATE KEY-----\n",
+  "client_email": "taxi-rider-eb595@appspot.gserviceaccount.com",
+  "client_id": "106565466099945682749",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/taxi-rider-eb595%40appspot.gserviceaccount.com"
+}
