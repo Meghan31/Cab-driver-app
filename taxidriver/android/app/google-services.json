@@ -30,6 +30,13 @@
             {
               "client_id": "772302949662-982k5dr173lm6t32mp7cb4mvpi0e789r.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "772302949662-bofs5gven2sb9ni0qjl21u32edbbu7qb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taxidriver"
+              }
             }
           ]
         }
@@ -59,6 +66,13 @@
             {
               "client_id": "772302949662-982k5dr173lm6t32mp7cb4mvpi0e789r.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "772302949662-bofs5gven2sb9ni0qjl21u32edbbu7qb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taxidriver"
+              }
             }
           ]
         }
