@@ -2,11 +2,14 @@
 
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:taxidriver/assistants/assistant_methods.dart';
+import 'package:taxidriver/notifications/push_notification_service.dart';
 import 'package:taxidriver/screens/signup_screen.dart';
 
 import '../api/config_maps.dart';
@@ -38,6 +41,13 @@ class _HomeTabPageState extends State<HomeTabPage> {
   Color driversStatusColor = Colors.black54;
 
   bool isDriverAvailable = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    getCurrentDriverInfo();
+  }
 
   Future<void> _getGeoLocationPosition() async {
     bool serviceEnabled;
@@ -119,6 +129,15 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
+  }
+
+  void getCurrentDriverInfo() async {
+    currentFirebaseUser = FirebaseAuth.instance.currentUser;
+
+    PushNotificationService pushNotificationService = PushNotificationService();
+
+    pushNotificationService.initialise();
+    pushNotificationService.getToken();
   }
 
   @override

@@ -10,9 +10,9 @@ import 'package:taxidriver/screens/login_screen.dart';
 import 'package:taxidriver/screens/main_screen.dart';
 import 'package:taxidriver/screens/signup_screen.dart';
 import 'package:taxidriver/screens/vehicle_info_screen.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'data handler/app_data.dart';
+import 'notifications/fcm.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,10 +20,15 @@ Future<void> main() async {
   currentFirebaseUser = FirebaseAuth.instance.currentUser;
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(const MyApp());
+
+  await fcmFunctions.initApp();
+  await fcmFunctions.iosWebPermission();
+  fcmFunctions.foreGroundMessageListener();
+  await fcmFunctions.subscripeToTopics("alldrivers");
+  await fcmFunctions.subscripeToTopics("allusers");
 }
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  debugPrint("Firebase Messaging firebase is initialized");
   await Firebase.initializeApp();
 }
 
